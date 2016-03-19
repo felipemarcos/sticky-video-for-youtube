@@ -84,15 +84,17 @@
 
   Video.prototype._watchPlayerChanges = function() {
     var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-    this.observer = new MutationObserver(this._reload.bind(this));
+    this.observer = new MutationObserver( this._reload.bind(this) );
 
-    this.observer.observe(this.player, this.options.observe);
+    this.observer.observe(document.querySelector('#player'), this.options.observe);
   };
 
   Video.prototype._reload = function() {
     if (!this.isVideoPage()) {
       return;
     }
+
+    console.log('RELOAD');
 
     this._removeListeners();
     this._setPlayer();
@@ -121,8 +123,6 @@
   };
 
   Video.prototype._destroy = function() {
-    console.log(this.observer);
-
     this.observer.disconnect();
     this._removeListeners();
     this.unstick();
