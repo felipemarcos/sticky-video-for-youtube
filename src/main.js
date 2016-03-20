@@ -94,8 +94,6 @@
       return;
     }
 
-    console.log('RELOAD');
-
     this._removeListeners();
     this._setPlayer();
     this._init();
