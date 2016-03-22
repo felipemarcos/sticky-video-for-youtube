@@ -18,7 +18,7 @@
 
     if (this.sidebar) {
       var sidebarPosition = this.sidebar.getBoundingClientRect();
-      this.playerApi.style.right = window.innerWidth - sidebarPosition.right + 'px';
+      this.playerApi.style.right = document.body.clientWidth - sidebarPosition.right + 'px';
       this.playerApi.style.width = sidebarPosition.width + 'px';
     }
 
