@@ -1,7 +1,7 @@
 {
   "name": "Sticky Video for YouTube",
   "short_name": "Sticky Video",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "manifest_version": 2,
   "description": "YouTube videos stay on your screen when you scroll.",
   "content_scripts": [
