@@ -1,3 +1,7 @@
+/*!
+ * Created by Felipe Marcos. 03/19/2016
+ */
+
 (function() {
   var Video = function(options) {
     this.options = {
