@@ -12,6 +12,8 @@
     };
 
     this._reload();
+
+    // Should run only once.
     this._controls();
     this._watchPlayerChanges();
   };
@@ -25,8 +27,6 @@
       this.playerApi.style.right = document.body.clientWidth - sidebarPosition.right + 'px';
       this.playerApi.style.width = sidebarPosition.width + 'px';
     }
-
-    // this._draggable();
   };
 
   Video.prototype.unstick = function() {
@@ -67,12 +67,6 @@
 
   // Methods
 
-  Video.prototype._draggable = function() {
-    // To do: Add drag and drop and resize.
-    this.draggie = new Draggabilly( '#player-api', {
-    });
-  };
-
   Video.prototype._controls = function() {
     var button = document.createElement('button');
     button.classList.add('player-sticky-controls');
@@ -93,7 +87,9 @@
     this.observer.observe(document.querySelector('#player'), this.options.observe);
   };
 
+  // Runs everytime there is a page change
   Video.prototype._reload = function() {
+    // If this isn't the video page, stop right there.
     if (!this.isVideoPage()) {
       return;
     }
@@ -103,6 +99,7 @@
     this._init();
   }
 
+  // Set elements
   Video.prototype._setPlayer = function() {
     this.playerApi = document.querySelector('#player-api');
     this.player = document.querySelector('#player');
@@ -114,6 +111,7 @@
   Video.prototype._removeListeners = function() {
     if (this.listener) {
       window.removeEventListener('scroll', this.listener);
+      window.removeEventListener('resize', this.listener);
     }
   };
 
@@ -121,6 +119,8 @@
     this.listener = this.throttle(this.handleScroll.bind(this), 10);
 
     window.addEventListener('scroll', this.listener);
+    window.addEventListener('resize', this.listener);
+
     this.handleScroll();
   };
 
