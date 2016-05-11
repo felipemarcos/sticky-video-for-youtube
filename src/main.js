@@ -27,6 +27,9 @@ class Video {
     this.player.classList.remove('player-sticky');
     this.playerApi.style.removeProperty('width');
     this.playerApi.style.removeProperty('right');
+
+    // Ensure the video is restored to its original width
+    window.dispatchEvent(new Event('resize'));
   }
 
   handleScroll() {
