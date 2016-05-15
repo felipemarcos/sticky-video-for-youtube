@@ -52,6 +52,7 @@
   /* Annotations */
   .player-sticky .video-annotations {
     opacity: 0;
+    visibility: hidden;
   }
 
   /* todo: Fix progress bar */

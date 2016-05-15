@@ -132,4 +132,4 @@ class StickyVideo {
   }
 }
 
-window.StickyVideo = new StickyVideo();
+new StickyVideo();
