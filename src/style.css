@@ -54,11 +54,6 @@
     opacity: 0;
     visibility: hidden;
   }
-
-  /* todo: Fix progress bar */
-  .player-sticky .ytp-progress-bar-container {
-    /*display: none;*/
-  }
 }
 
 /* Controls */
