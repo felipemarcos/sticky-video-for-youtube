@@ -12,7 +12,8 @@
     "babel-loader": "^6.2.4"
   },
   "scripts": {
-    "start": "webpack --watch -p"
+    "start": "webpack --watch -p",
+    "build": "zip -r sticky-video.zip src -x \"*.DS_Store\" \"*.main.js\""
   },
   "repository": "FelipeMarcos/sticky-video",
   "keywords": [
