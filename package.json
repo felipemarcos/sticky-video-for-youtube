@@ -1,6 +1,6 @@
 {
   "name": "sticky-video",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Allows for continuous video viewing while scrolling through the comments section.",
   "license": "MIT",
   "author": "Felipe Marcos",

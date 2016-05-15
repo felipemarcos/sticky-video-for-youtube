@@ -1,4 +1,4 @@
-class Video {
+class StickyVideo {
   constructor() {
     this.options = {
       observe: {
@@ -27,9 +27,6 @@ class Video {
     this.player.classList.remove('player-sticky');
     this.playerApi.style.removeProperty('width');
     this.playerApi.style.removeProperty('right');
-
-    // Ensure the video is restored to its original width
-    window.dispatchEvent(new Event('resize'));
   }
 
   handleScroll() {
@@ -54,11 +51,11 @@ class Video {
         }, limit);
       }
     }
-  };
+  }
 
   isVideoPage() {
     return location.pathname === '/watch';
-  };
+  }
 
   _controls() {
     const button = document.createElement('button');
@@ -70,14 +67,14 @@ class Video {
     }
 
     button.addEventListener('click', this._destroy.bind(this));
-  };
+  }
 
   _watchPlayerChanges() {
     const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
     this.observer = new MutationObserver( this._reload.bind(this) );
 
     this.observer.observe(document.querySelector('#player'), this.options.observe);
-  };
+  }
 
   // Runs everytime the player changes
   _reload() {
@@ -96,14 +93,15 @@ class Video {
     this.sidebar = document.querySelector('#watch7-sidebar-contents');
 
     this.scrollHeight = this.playerApi.clientHeight;
-  };
+    window.dispatchEvent(new Event('resize'));
+  }
 
   _removeListeners() {
     if (this.listener) {
       window.removeEventListener('scroll', this.listener);
       window.removeEventListener('resize', this.listener);
     }
-  };
+  }
 
   _listeners() {
     this.listener = this.throttle(this.handleScroll.bind(this), 10);
@@ -112,17 +110,17 @@ class Video {
     window.addEventListener('resize', this.listener);
 
     this.handleScroll();
-  };
+  }
 
   _destroy() {
     this.observer.disconnect();
     this._removeListeners();
     this.unstick();
-  };
+  }
 
   _init() {
     this._listeners();
-  };
+  }
 }
 
-new Video();
+new StickyVideo();

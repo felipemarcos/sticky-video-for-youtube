@@ -1,12 +1,17 @@
 @media screen and (min-width: 680px) {
   #player.player-sticky #player-api {
     position: fixed;
-    top: 60px;
+    top: 65px;
     right: 107px;
     left: auto;
     width: 416px;
     height: 230px;
     margin: 0;
+  }
+
+  .video-stream {
+    width: 100%!important;
+    height: auto!important;
   }
 
   .player-sticky .video-stream {
@@ -71,6 +76,10 @@
   transition: opacity .1s cubic-bezier(0.4, 0.0, 1, 1), visibility .1s cubic-bezier(0.4, 0.0, 1, 1);
 }
 
+.ytp-autohide .player-sticky-controls {
+  opacity: 0;
+}
+
 .player-sticky-controls svg {
   display: block;
   width: 20px;
@@ -79,10 +88,6 @@
 
 .player-sticky-controls path {
   fill: rgba(255, 255, 255, 0.7);
-}
-
-.player-sticky .ytp-autohide .player-sticky-controls {
-  opacity: 0;
 }
 
 .player-sticky:hover .player-sticky-controls {
