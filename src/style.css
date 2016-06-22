@@ -10,14 +10,14 @@
   }
 
   .video-stream {
-    width: 100%!important;
-    height: auto!important;
+    /*width: 100%!important;*/
+    /*height: auto!important;*/
   }
 
   .player-sticky .video-stream {
-    width: 100%!important;
-    height: auto!important;
-    left: 0!important;
+    /*width: 100%!important;*/
+    /*height: auto!important;*/
+    /*left: 0!important;*/
   }
 
   .player-sticky .ytp-chrome-bottom {
@@ -54,39 +54,4 @@
     opacity: 0;
     visibility: hidden;
   }
-}
-
-/* Controls */
-.player-sticky-controls {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  z-index: 10;
-
-  display: inline-block;
-  cursor: pointer;
-
-  opacity: 0;
-  visibility: hidden;
-
-  transition: opacity .1s cubic-bezier(0.4, 0.0, 1, 1), visibility .1s cubic-bezier(0.4, 0.0, 1, 1);
-}
-
-.ytp-autohide .player-sticky-controls {
-  opacity: 0;
-}
-
-.player-sticky-controls svg {
-  display: block;
-  width: 20px;
-  height: 20px;
-}
-
-.player-sticky-controls path {
-  fill: rgba(255, 255, 255, 0.7);
-}
-
-.player-sticky:hover .player-sticky-controls {
-  opacity: 1;
-  visibility: visible;
 }

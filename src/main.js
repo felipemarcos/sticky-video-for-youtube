@@ -9,7 +9,6 @@ class StickyVideo {
     };
 
     this._reload();
-    this._controls();
     this._watchPlayerChanges();
   }
 
@@ -67,18 +66,6 @@ class StickyVideo {
 
   isVideoPage() {
     return location.pathname === '/watch';
-  }
-
-  _controls() {
-    const button = document.createElement('button');
-    button.classList.add('player-sticky-controls');
-    button.innerHTML = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 988 982" enable-background="new 0 0 988 982" xml:space="preserve"> <path d="M496,10C232,10,16,226,16,490s216,480,480,480s480-216,480-480S760,10,496,10z M736,670l-60,60L496,550L316,730l-60-60 l180-180L256,310l60-60l180,180l180-180l60,60L556,490L736,670z"/></svg>';
-
-    if (this.playerApi) {
-      this.playerApi.appendChild(button);
-    }
-
-    button.addEventListener('click', this._destroy.bind(this));
   }
 
   _watchPlayerChanges() {
