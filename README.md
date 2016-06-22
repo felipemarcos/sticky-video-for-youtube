@@ -11,4 +11,5 @@ YouTube videos stay on your screen when you scroll.
 ```shell
 npm install
 npm start
+npm build
 ```
