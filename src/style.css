@@ -9,17 +9,6 @@
     margin: 0;
   }
 
-  .video-stream {
-    /*width: 100%!important;*/
-    /*height: auto!important;*/
-  }
-
-  .player-sticky .video-stream {
-    /*width: 100%!important;*/
-    /*height: auto!important;*/
-    /*left: 0!important;*/
-  }
-
   .player-sticky .ytp-chrome-bottom {
     width: 392px!important;
     left: 12px!important;
