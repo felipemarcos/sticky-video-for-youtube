@@ -1,6 +1,6 @@
 # Sticky Video for YouTube
 
-Allows for continuous video viewing while scrolling through the comments section.
+YouTube videos stay on your screen when you scroll.
 
 [Install](http://chrome.google.com/webstore/detail/nbepmleipmhgbnpklhlkkbgmobdeephp)
 
