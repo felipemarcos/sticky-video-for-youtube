@@ -1,12 +1,22 @@
+body {
+  --sticky-video-width: 416px;
+  --sticky-video-height: 230px;
+}
+
 @media screen and (min-width: 680px) {
   #player.player-sticky #player-api {
     position: fixed;
     top: 65px;
     right: 107px;
     left: auto;
-    width: 416px;
-    height: 230px;
+    width: var(--sticky-video-width);
+    height: var(--sticky-video-height);
     margin: 0;
+  }
+
+  #player.player-sticky .video-stream {
+    width: var(--sticky-video-width)!important;
+    height: var(--sticky-video-height)!important;
   }
 
   .player-sticky .ytp-chrome-bottom {
@@ -38,7 +48,7 @@
     left: 20px;
   }
 
-  /* Annotations */
+  /* Hide annotations */
   .player-sticky .video-annotations {
     opacity: 0;
     visibility: hidden;
