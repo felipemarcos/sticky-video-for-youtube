@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://www.youtube.com/*"
+        "*://*.youtube.com/*"
       ],
       "run_at": "document_end",
       "css": [

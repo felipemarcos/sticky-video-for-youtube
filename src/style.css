@@ -4,13 +4,15 @@ body {
 }
 
 @media screen and (min-width: 680px) {
-  #player.player-sticky #player-api {
+  #player.player-sticky #player-api,
+  #player.player-sticky .html5-video-player {
     position: fixed;
     top: 65px;
     right: 107px;
     left: auto;
     width: var(--sticky-video-width);
     height: var(--sticky-video-height);
+    z-index: 2000;
     margin: 0;
   }
 
