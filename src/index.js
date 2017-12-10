@@ -30,7 +30,6 @@ class StickyVideo {
     this.isSticky = true;
     this.player.classList.add('player-sticky');
 
-    console.log(this.sidebar);
     if (this.sidebar) {
       const sidebarPosition = this.sidebar.getBoundingClientRect();
       this.playerVideo.style.right = document.body.clientWidth - sidebarPosition.right + 'px';

@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "webpack --watch -p",
-    "build": "zip -r sticky-video.zip src -x \"*.DS_Store\" \"*.index.js\""
+    "build": "zip -r sticky-video.zip src -x \"*.DS_Store\" \"index.js\""
   },
   "repository": "FelipeMarcos/sticky-video",
   "keywords": [
