@@ -18,7 +18,6 @@ class StickyVideo {
     };
 
     this._reload();
-
     this.select(this._initNew, this._initOld)();
   }
 
@@ -106,11 +105,12 @@ class StickyVideo {
 
   _setPlayer() {
     const player = this.select('ytd-watch #player', '#player');
-    const playerVideo = this.select('#player', '#player-api');
+    const playerVideo = this.select('ytd-watch #player', '#player-api');
+    const sidebar = this.select('#related', '#watch7-sidebar-contents');
 
     this.player = document.querySelector( player );
     this.playerVideo = document.querySelector( playerVideo );
-    this.sidebar = document.querySelector('#watch7-sidebar-contents');
+    this.sidebar = document.querySelector( sidebar );
 
     if (this.playerVideo) {
       this.scrollHeight = this.playerVideo.clientHeight;
@@ -152,4 +152,4 @@ class StickyVideo {
   }
 }
 
-window.addEventListener('DOMContentLoaded', () => new StickyVideo());
+new StickyVideo();
